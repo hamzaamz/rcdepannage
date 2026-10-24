@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RC Dépannage & Carservice | Remorquage 24/7 Belgique & Europe | Atelier Jumet</title>
+  <meta name="description" content="Assistance dépannage et remorquage professionnel 24h/24 et 7j/7 partout en Belgique et en Europe. Atelier mécanique à Jumet, déblocage de boîte automatique, clé perdue et mécatronique. Téléphone : 0472 06 62 36.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="RC Dépannage & Carservice | Dépannage 24/7 en Belgique & Europe">
+  <meta property="og:description" content="Dépanneuse plateau sur place en 30 à 45 min. Réparations en atelier à Jumet, déblocage boîte auto, clés, mécatronique. TVA BE 0534.982.714.">
+  <meta property="og:type" content="website">
+  
+  <!-- Google Fonts : Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       TOP NOTICE BAR (PERMANENCE ROUTIÈRE 24/7)
+       ======================================================================== -->
+  <aside class="top-notice-bar" aria-label="Informations de permanence">
+    <div class="container top-notice-inner">
+      <div class="top-notice-left">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span class="top-notice-text">
+          DISPONIBILITÉ ACTIVE EN TEMPS RÉEL : DÉPANNEUSES EN PATROUILLE EN BELGIQUE ET EN EUROPE
+        </span>
+      </div>
+      <div class="top-notice-right">
+        <span class="top-notice-item">ATELIER : RUE LOUIS BIERNEAUX 72, JUMET</span>
+        <span class="top-notice-item">TVA : BE 0534.982.714</span>
+        <a href="tel:+32472066236" class="top-notice-phone" title="Appeler RC Dépannage">APPEL DIRECT : 0472 06 62 36</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       SITE HEADER / NAVBAR (LOGO STRICTEMENT CENTRÉ SUR MOBILE)
+       ======================================================================== -->
+  <header class="site-header" id="mainHeader">
+    <div class="container navbar-container">
+      
+      <!-- Bouton Menu Burger Mobile (Gauche sur mobile) -->
+      <button type="button" class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Ouvrir le menu de navigation">
+        <span class="burger-icon" aria-hidden="true">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </span>
+      </button>
+
+      <!-- Logo & Identité (Centré sur mobile, Gauche sur desktop) -->
+      <a href="#hero" class="brand-link" title="RC Dépannage & Carservice Accueil">
+        <img src="img/logo.jpeg" alt="RC Carservice Dépannage Logo" class="brand-logo-img">
+        <div class="brand-text-block">
+          <span class="brand-title">RC DÉPANNAGE</span>
+          <span class="brand-tagline">CARSERVICE • BELGIQUE & EUROPE</span>
+        </div>
+      </a>
+
+      <!-- Navigation Desktop (Centre sur desktop) -->
+      <nav class="nav-menu-desktop" aria-label="Navigation principale">
+        <a href="#services" class="nav-link">SERVICES</a>
+        <a href="#rapatriement" class="nav-link">RAPATRIEMENT EUROPE</a>
+        <a href="#atelier" class="nav-link">ATELIER JUMET</a>
+        <a href="#galerie" class="nav-link">FLOTTE</a>
+        <a href="#formulaire" class="nav-link">DEVIS EN LIGNE</a>
+        <a href="#zones" class="nav-link">ZONES</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <!-- Actions Desktop (Droite sur desktop) -->
+      <div class="navbar-actions-desktop">
+        <div class="call-pill-desktop">
+          <span class="call-pill-label">URGENCE 24H/24 & 7J/7</span>
+          <a href="tel:+32472066236" class="call-pill-number">0472 06 62 36</a>
+        </div>
+        <a href="#formulaire" class="btn btn-primary">DEMANDE EXPRESS</a>
+      </div>
+
+      <!-- Bouton Appel Mobile Direct (Droite sur mobile) -->
+      <a href="tel:+32472066236" class="mobile-call-btn" title="Appeler d'urgence">
+        APPEL 24/7
+      </a>
+
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       TIROIR MOBILE / BURGER DRAWER COMPLET
+       ======================================================================== -->
+  <div class="mobile-drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Menu mobile complet">
+    <div>
+      <div class="drawer-header">
+        <div class="badge-mono">NAVIGATION RAPIDE</div>
+        <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Fermer le menu">
+          FERMER &times;
+        </button>
+      </div>
+
+      <nav class="drawer-menu-list">
+        <a href="#hero" class="drawer-menu-link">
+          <span>00. ACCUEIL</span>
+          <span class="nav-arrow" aria-hidden="true">-></span>
+        </a>
+        <a href="#services" class="drawer-menu-link">
+          <span>01. NOS SERVICES</span>
+          <span class="nav-arrow" aria-hidden="true">-></span>
+        </a>
+        <a href="#rapatriement" class="drawer-menu-link">
+          <span>02. RAPATRIEMENT EUROPE</span>
+          <span class="nav-arrow" aria-hidden="true">-></span>
+        </a>
+        <a href="#atelier" class="drawer-menu-link">
+          <span>03. ATELIER MÉCANIQUE JUMET</span>
+          <span class="nav-arrow" aria-hidden="true">-></span>
+        </a>
+        <a href="#galerie" class="drawer-menu-link">
+          <span>04. NOTRE FLOTTE DE PLATEAUX</span>
+          <span class="nav-arrow" aria-hidden="true">-></span>
+        </a>
+        <a href="#formulaire" class="drawer-menu-link">
+          <span>05. DEMANDE D'INTERVENTION</span>
+          <span class="nav-arrow" aria-hidden="true">-></span>
+        </a>
+        <a href="#zones" class="drawer-menu-link">
+          <span>06. ZONES COUVERTES</span>
+          <span class="nav-arrow" aria-hidden="true">-></span>
+        </a>
+        <a href="#faq" class="drawer-menu-link">
+          <span>07. QUESTIONS FRÉQUENTES</span>
+          <span class="nav-arrow" aria-hidden="true">-></span>
+        </a>
+        <a href="#contact" class="drawer-menu-link">
+          <span>08. COORDONNÉES & ACCÈS</span>
+          <span class="nav-arrow" aria-hidden="true">-></span>
+        </a>
+      </nav>
+    </div>
+
+    <div class="drawer-bottom-card">
+      <div class="drawer-meta-title">LIGNE D'URGENCE IMMÉDIATE</div>
+      <a href="tel:+32472066236" class="btn btn-emergency" style="width: 100%;">
+        0472 06 62 36
+      </a>
+      <div style="font-size: 0.76rem; color: #94a3b8; line-height: 1.4; margin-top: 6px;">
+        Garage : Rue Louis Bierneaux 72, 6040 Jumet<br>
+        TVA : BE 0534.982.714
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       HERO SECTION (IRRÉPROCHABLE AVEC PHOTO RÉELLE DE FOND)
+       ======================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-background-wrapper">
+      <img src="img/img_hero.jpeg" alt="Dépanneuse plateau Mercedes RC Carservice avec véhicule chargé" class="hero-bg-img">
+      <div class="hero-overlay"></div>
+      <div class="hero-grid-pattern"></div>
+    </div>
+
+    <div class="container hero-content">
+      
+      <!-- Texte Hero -->
+      <div class="hero-text-block">
+        <div class="hero-badge-row">
+          <span class="badge-mono">
+            <span class="status-dot"></span>
+            SERVICE ACTIF : <span id="liveCurrentDay">SAMEDI</span>
+          </span>
+          <span class="badge-mono badge-white">BELGIQUE & EUROPE</span>
+          <span class="badge-mono badge-amber">INTERVENTION EN 30 À 45 MIN</span>
+        </div>
+
+        <h1 class="hero-title">
+          Votre dépanneur agréé partout en <span class="text-gradient">Belgique & en Europe.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Panne mécanique, accident, boîte automatique bloquée, batterie déchargée ou rapatriement transfrontalier : notre flotte de dépanneuses plateau intervient sans délai. Notre atelier mécanique à Jumet assure également l'ensemble de vos réparations.
+        </p>
+
+        <ul class="hero-specs-list" aria-label="Avantages clés">
+          <li class="hero-spec-item">DÉPANNEUSE SUR PLACE EN MOINS DE 45 MIN</li>
+          <li class="hero-spec-item">AGRÉÉ TOUTES COMPAGNIES D'ASSURANCES</li>
+          <li class="hero-spec-item">ATELIER MÉCANIQUE SPÉCIALISÉ À JUMET</li>
+          <li class="hero-spec-item">DÉBLOCAGE BOÎTE AUTO & MÉCATRONIQUE</li>
+        </ul>
+
+        <div class="hero-cta-group">
+          <a href="tel:+32472066236" class="btn btn-emergency">
+            URGENCE : APPELER LE 0472 06 62 36
+          </a>
+          <a href="#formulaire" class="btn btn-secondary">
+            DEMANDER UN REMORQUAGE
+          </a>
+        </div>
+      </div>
+
+      <!-- Section / Carte Rapatriement Étranger : En panne à l'étranger ? -->
+      <div class="hero-repat-card" id="rapatriement">
+        <div class="repat-card-header">
+          <span class="badge-mono badge-amber">RAPATRIEMENT BELGIQUE & EUROPE</span>
+          <span class="badge-mono">24H / 24</span>
+        </div>
+
+        <h3 class="hero-repat-title">
+          En panne à l'étranger ? Nous venons vous rapatrier en Belgique.
+        </h3>
+
+        <div class="hero-repat-media">
+          <img src="img/img8.jpeg" alt="Remorquage nocturne et rapatriement de véhicule en Europe" class="hero-repat-img">
+          <div class="hero-repat-badge">
+            ALLEMAGNE • FRANCE • PAYS-BAS • LUXEMBOURG
+          </div>
+        </div>
+
+        <p class="hero-repat-desc">
+          Que vous soyez immobilisé sur une autoroute en Allemagne, en France ou ailleurs en Europe, notre service de remorquage longue distance organise la prise en charge immédiate de votre véhicule vers votre domicile ou notre garage à Jumet.
+        </p>
+
+        <ul class="hero-repat-steps-list">
+          <li class="hero-repat-step">
+            <span class="repat-step-num">01</span>
+            <div class="repat-step-text">
+              <span class="repat-step-title">Localisation et devis immédiat</span>
+              <span class="repat-step-sub">Point kilométrique ou adresse, validation sans surprise.</span>
+            </div>
+          </li>
+          <li class="hero-repat-step">
+            <span class="repat-step-num">02</span>
+            <div class="repat-step-text">
+              <span class="repat-step-title">Départ du plateau & treuil homologué</span>
+              <span class="repat-step-sub">Chauffeur en liaison directe jusqu'à votre position.</span>
+            </div>
+          </li>
+          <li class="hero-repat-step">
+            <span class="repat-step-num">03</span>
+            <div class="repat-step-text">
+              <span class="repat-step-title">Rapatriement sécurisé ou atelier Jumet</span>
+              <span class="repat-step-sub">Livraison à domicile ou réparation immédiate en garage.</span>
+            </div>
+          </li>
+        </ul>
+
+        <div class="hero-repat-actions">
+          <a href="tel:+32472066236" class="btn btn-emergency" style="width: 100%;">
+            APPEL DIRECT RAPATRIEMENT : 0472 06 62 36
+          </a>
+          <a href="#formulaire" class="btn btn-secondary" style="width: 100%; font-size: 0.82rem; padding: 11px;">
+            DEVIS RAPATRIEMENT EN LIGNE
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       STATISTICS & REASSURANCE BAR (TYPOGRAPHIE PURE, ZÉRO SYMBOLE)
+       ======================================================================== -->
+  <section class="stats-strip" aria-label="Chiffres clés">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <span class="stat-number">24 / 7</span>
+        <span class="stat-title">DISPONIBILITÉ PERMANENTE</span>
+        <span class="stat-desc">Ligne téléphonique directe et interventions d'urgence jour et nuit.</span>
+      </div>
+
+      <div class="stat-item">
+        <span class="stat-number">&lt; 45 MIN</span>
+        <span class="stat-title">RAPIDITÉ D'ARRIVÉE</span>
+        <span class="stat-desc">Prise en charge express sur autoroute, nationale ou à domicile.</span>
+      </div>
+
+      <div class="stat-item">
+        <span class="stat-number">BE 0534</span>
+        <span class="stat-title">GARAGE & TRANSPORTEUR DÉCLARÉ</span>
+        <span class="stat-desc">TVA BE 0534.982.714 avec facture officielle pour vos assurances.</span>
+      </div>
+
+      <div class="stat-item">
+        <span class="stat-number">100% PLATEAU</span>
+        <span class="stat-title">SÉCURITÉ MÉCANIQUE TOTALE</span>
+        <span class="stat-desc">Transport sur plateau basculant sans aucun frottement au sol.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SERVICES SECTION (LES 9 SERVICES EXPLICITES DU WHATSAPP)
+       ======================================================================== -->
+  <section class="section section-dark" id="services">
+    <div class="container">
+      
+      <div class="section-head centered">
+        <span class="badge-mono">SOLUTIONS ROUTIÈRES & ATELIER</span>
+        <h2 class="section-head-title">Une prise en charge complète pour chaque situation</h2>
+        <p class="section-head-desc">
+          De l'incident imprévu sur l'autoroute à la réparation mécanique de pointe en atelier, nous mobilisons le matériel adapté pour remettre votre véhicule en circulation.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- 01. Remorquage Plateau Toutes Distances -->
+        <article class="service-card">
+          <div class="service-card-media">
+            <img src="img/img2.jpeg" alt="Remorquage plateau Peugeot SUV par RC Carservice" class="service-card-img">
+            <span class="service-card-tag badge-mono">URGENCE ROUTE</span>
+          </div>
+          <div class="service-card-body">
+            <span class="service-card-num">SERVICE 01</span>
+            <h3 class="service-card-title">Remorquage Plateau Toutes Distances</h3>
+            <p class="service-card-desc">
+              Intervention rapide pour tout véhicule immobilisé suite à une panne ou un accident. Prise en charge sur plateau hydraulique pour préserver la mécanique et les trains roulants.
+            </p>
+            <ul class="service-card-features">
+              <li class="service-feature-item">Voitures particulières, SUV et 4x4</li>
+              <li class="service-feature-item">Utilitaires, camionnettes et châssis longs</li>
+              <li class="service-feature-item">Transport vers notre atelier ou le garage de votre choix</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="tel:+32472066236" class="service-action-link">APPELER CE SERVICE -></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 02. Mécanique Générale en Atelier à Jumet -->
+        <article class="service-card">
+          <div class="service-card-media">
+            <img src="img/img9.jpeg" alt="Atelier de mécanique automobile RC Carservice à Jumet" class="service-card-img">
+            <span class="service-card-tag badge-mono">ATELIER JUMET</span>
+          </div>
+          <div class="service-card-body">
+            <span class="service-card-num">SERVICE 02</span>
+            <h3 class="service-card-title">Réparations Mécaniques en Atelier</h3>
+            <p class="service-card-desc">
+              Notre garage situé Rue Louis Bierneaux 72 à Jumet dispose d'un atelier complet d'entretien et de mécanique générale pour réparer votre véhicule sans délai.
+            </p>
+            <ul class="service-card-features">
+              <li class="service-feature-item">Diagnostic électronique multimarque par valise</li>
+              <li class="service-feature-item">Freinage, suspensions, embrayage et moteur</li>
+              <li class="service-feature-item">Devis clair avant toute intervention mécanique</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="#atelier" class="service-action-link">DÉCOUVRIR L'ATELIER -></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 03. Déblocage Boîte Automatique Bloquée -->
+        <article class="service-card">
+          <div class="service-card-media">
+            <img src="img/img4.jpeg" alt="Dépanneuse RC Carservice avec véhicule à boîte automatique" class="service-card-img">
+            <span class="service-card-tag badge-mono badge-amber">SPÉCIALITÉ TECHNIQUE</span>
+          </div>
+          <div class="service-card-body">
+            <span class="service-card-num">SERVICE 03</span>
+            <h3 class="service-card-title">Déblocage Boîte Automatique</h3>
+            <p class="service-card-desc">
+              Levier bloqué sur Parking (P) ou commande électronique inactive ? Nous appliquons les procédures de déblocage constructeur pour charger le véhicule sans endommager la transmission.
+            </p>
+            <ul class="service-card-features">
+              <li class="service-feature-item">Déverrouillage mécanique d'urgence</li>
+              <li class="service-feature-item">Chargement sur chariots de ripage si nécessaire</li>
+              <li class="service-feature-item">Protection intégrale de la boîte de vitesses</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="tel:+32472066236" class="service-action-link">URGENCE BOÎTE AUTO -></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 04. Réparation Spécialisée Mécatronique -->
+        <article class="service-card">
+          <div class="service-card-media">
+            <img src="img/img5.jpeg" alt="Véhicule pris en charge pour diagnostic mécatronique" class="service-card-img">
+            <span class="service-card-tag badge-mono">DIAGNOSTIC AVANCÉ</span>
+          </div>
+          <div class="service-card-body">
+            <span class="service-card-num">SERVICE 04</span>
+            <h3 class="service-card-title">Réparation de Mécatronique</h3>
+            <p class="service-card-desc">
+              Défaillance du calculateur de boîte ou du module hydraulique ? Nous intervenons sur les unités mécatroniques des boîtes robotisées et automatiques (DSG, S-Tronic, ZF).
+            </p>
+            <ul class="service-card-features">
+              <li class="service-feature-item">Lecture des codes défauts et pressions hydrauliques</li>
+              <li class="service-feature-item">Remplacement ou réfection des modules électrohydrauliques</li>
+              <li class="service-feature-item">Reprogrammation et adaptation d'embrayages</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="#formulaire" class="service-action-link">DEMANDE DE DEVIS -></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 05. Clés Perdues & Ouverture de Porte -->
+        <article class="service-card">
+          <div class="service-card-media">
+            <img src="img/img3.jpeg" alt="Assistance serrurerie automobile et ouverture de portière" class="service-card-img">
+            <span class="service-card-tag badge-mono">OUVERTURE SANS DÉGÂT</span>
+          </div>
+          <div class="service-card-body">
+            <span class="service-card-num">SERVICE 05</span>
+            <h3 class="service-card-title">Clés Perdues & Ouverture de Portière</h3>
+            <p class="service-card-desc">
+              Clés enfermées dans le coffre ou perte totale de vos clés de voiture ? Ouverture professionnelle de portière sans briser la vitre ni rayer la carrosserie.
+            </p>
+            <ul class="service-card-features">
+              <li class="service-feature-item">Ouverture fine de serrure sans aucun dommage</li>
+              <li class="service-feature-item">Refaire une nouvelle clé rapidement (en ~1h selon modèle)</li>
+              <li class="service-feature-item">Reprogrammation du transpondeur anti-démarrage</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="tel:+32472066236" class="service-action-link">OUVRIR MON VÉHICULE -></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 06. Batterie à Plat & Démarrage Booster -->
+        <article class="service-card">
+          <div class="service-card-media">
+            <img src="img/img8.jpeg" alt="Dépannage batterie de nuit par RC Carservice" class="service-card-img">
+            <span class="service-card-tag badge-mono">INTERVENTION SUR PLACE</span>
+          </div>
+          <div class="service-card-body">
+            <span class="service-card-num">SERVICE 06</span>
+            <h3 class="service-card-title">Batterie à Plat & Booster Pro</h3>
+            <p class="service-card-desc">
+              Votre véhicule refuse de démarrer ? Nous venons directement sur place pour relancer votre moteur à l'aide d'un booster haute puissance ou installer une nouvelle batterie.
+            </p>
+            <ul class="service-card-features">
+              <li class="service-feature-item">Booster professionnel sécurisé 12V et 24V</li>
+              <li class="service-feature-item">Test immédiat de l'alternateur et du circuit de charge</li>
+              <li class="service-feature-item">Remplacement de batterie sur place avec modèle adapté</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="tel:+32472066236" class="service-action-link">DEMANDER UN BOOSTER -></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 07. Erreur de Carburant (Vidange sur place) -->
+        <article class="service-card">
+          <div class="service-card-media">
+            <img src="img/img1.jpeg" alt="Assistance dépannage utilitaire erreur carburant" class="service-card-img">
+            <span class="service-card-tag badge-mono">PURGE SÉCURISÉE</span>
+          </div>
+          <div class="service-card-body">
+            <span class="service-card-num">SERVICE 07</span>
+            <h3 class="service-card-title">Erreur de Carburant (Vidange sur place)</h3>
+            <p class="service-card-desc">
+              Essence mise dans un moteur diesel ou inversement ? Ne démarrez surtout pas le moteur. Notre équipe intervient avec pompe d'aspiration pour vidanger et purger le réservoir.
+            </p>
+            <ul class="service-card-features">
+              <li class="service-feature-item">Siphonage propre et recyclage du carburant souillé</li>
+              <li class="service-feature-item">Purge des canalisations et remplacement du filtre si requis</li>
+              <li class="service-feature-item">Préservation intégrale des injecteurs et de la pompe haute pression</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="tel:+32472066236" class="service-action-link">URGENCE CARBURANT -></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 08. Crevaison de Pneus & Assistance Roues -->
+        <article class="service-card">
+          <div class="service-card-media">
+            <img src="img/img7.jpeg" alt="Dépannage pneumatique sur route par dépanneuse plateau" class="service-card-img">
+            <span class="service-card-tag badge-mono">ASSISTANCE PNEU</span>
+          </div>
+          <div class="service-card-body">
+            <span class="service-card-num">SERVICE 08</span>
+            <h3 class="service-card-title">Crevaison de Pneus & Roues</h3>
+            <p class="service-card-desc">
+              Pneu crevé, écrou antivol endommagé ou pas de roue de secours ? Nous intervenons sur place pour changer votre roue, poser une mèche ou transporter le véhicule en atelier.
+            </p>
+            <ul class="service-card-features">
+              <li class="service-feature-item">Montage rapide de votre roue galette ou de secours</li>
+              <li class="service-feature-item">Réparation crevaison par mèche sur la bande de roulement</li>
+              <li class="service-feature-item">Extraction sécurisée des antivols récalcitrants</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="tel:+32472066236" class="service-action-link">DÉPANNER MON PNEU -></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 09. Enlèvement d'Épave & Rachat pour la Mitraille -->
+        <article class="service-card">
+          <div class="service-card-media">
+            <img src="img/img6.jpeg" alt="Enlèvement de véhicule pour ferraille et mitraille" class="service-card-img">
+            <span class="service-card-tag badge-mono badge-white">REPRISE & DÉBARRAS</span>
+          </div>
+          <div class="service-card-body">
+            <span class="service-card-num">SERVICE 09</span>
+            <h3 class="service-card-title">Enlèvement d'Épave & Mitraille</h3>
+            <p class="service-card-desc">
+              Véhicule accidenté, moteur hors service, non roulant ou encombrant ? Nous venons vous en débarrasser rapidement pour la ferraille / mitraille dans les règles environnementales.
+            </p>
+            <ul class="service-card-features">
+              <li class="service-feature-item">Enlèvement sur plateau avec treuil puissant</li>
+              <li class="service-feature-item">Rachat ou reprise possible selon le véhicule</li>
+              <li class="service-feature-item">Certificat de destruction et démarches administratives</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="#formulaire" class="service-action-link">ENLEVER MON ÉPAVE -></a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- ========================================================================
+       ATELIER DE RÉPARATION & GARAGE À JUMET
+       ======================================================================== -->
+  <section class="section section-dark" id="atelier">
+    <div class="container workshop-grid">
+      
+      <div class="workshop-photo-col">
+        <div class="workshop-photo-main">
+          <img src="img/img9.jpeg" alt="Camionnette de dépannage RC Carservice devant le garage à Jumet">
+        </div>
+        
+        <div class="workshop-details-card">
+          <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-blue-cyan); letter-spacing: 0.08em; text-transform: uppercase;">
+            FICHE IDENTITÉ DU GARAGE
+          </div>
+          <div style="font-size: 1.1rem; font-weight: 800; color: #ffffff;">
+            RC Carservice • Dépannage & Atelier
+          </div>
+          <div style="font-size: 0.88rem; color: #cbd5e1; line-height: 1.5;">
+            Adresse : Rue Louis Bierneaux 72, 6040 Jumet (Charleroi)<br>
+            TVA : BE 0534.982.714 • Téléphone : 0472 / 06 62 36
+          </div>
+        </div>
+      </div>
+
+      <div class="workshop-content">
+        <span class="badge-mono">BASE TECHNIQUE & ATELIER</span>
+        
+        <h2 class="section-head-title">
+          Un vrai garage mécanique pour ne pas vous laisser sans solution après le remorquage
+        </h2>
+
+        <p class="section-head-desc" style="max-width: 100%;">
+          Contrairement aux simples transporteurs qui déposent votre véhicule sur un trottoir, RC Carservice dispose d'un atelier mécanique complet situé Rue Louis Bierneaux 72 à Jumet. Nous pouvons remorquer votre véhicule et attaquer immédiatement la réparation.
+        </p>
+
+        <div class="workshop-services-row">
+          <div class="workshop-service-pill">
+            <span class="workshop-service-pill-title">Diagnostic Valise Électronique</span>
+            <span class="workshop-service-pill-desc">Interrogation des calculateurs moteur, boîte et ABS.</span>
+          </div>
+
+          <div class="workshop-service-pill">
+            <span class="workshop-service-pill-title">Boîtes Automatiques & Mécatronique</span>
+            <span class="workshop-service-pill-desc">Réparation, vidange et reconditionnement DSG/BVA.</span>
+          </div>
+
+          <div class="workshop-service-pill">
+            <span class="workshop-service-pill-title">Distribution, Freinage & Moteur</span>
+            <span class="workshop-service-pill-desc">Interventions mécaniques lourdes ou révisions d'entretien.</span>
+          </div>
+
+          <div class="workshop-service-pill">
+            <span class="workshop-service-pill-title">Clés & Anti-Démarrage</span>
+            <span class="workshop-service-pill-desc">Reproduction et programmation rapide de nouvelles clés.</span>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 14px;">
+          <a href="tel:+32472066236" class="btn btn-primary">CONTACTER L'ATELIER</a>
+          <a href="#formulaire" class="btn btn-secondary">PRENDRE RENDEZ-VOUS</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION GALERIE TERRAIN / NOTRE FLOTTE (PHOTOS RÉELLES FOURNIES)
+       ======================================================================== -->
+  <section class="section section-navy" id="galerie">
+    <div class="container">
+      
+      <div class="section-head centered">
+        <span class="badge-mono">AUTHENTICITÉ & TERRAIN</span>
+        <h2 class="section-head-title">Nos interventions réelles en images</h2>
+        <p class="section-head-desc">
+          Nos dépanneuses plateau en mission : véhicules de tourisme, utilitaires volumineux, 4x4 lourds, ancêtres de collection et rapatriements nocturnes.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        
+        <div class="gallery-item span-2">
+          <img src="img/img1.jpeg" alt="Remorquage utilitaire grand volume sur plateau" class="gallery-img">
+          <div class="gallery-label">PRISE EN CHARGE UTILITAIRE VOLUMINEUX & FOURGON</div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/img3.jpeg" alt="Chargement arrière Peugeot 2008 sur plateau de dépannage" class="gallery-img">
+          <div class="gallery-label">ARRIMAGE SÉCURISÉ TOURISME</div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/img8.jpeg" alt="Dépannage de nuit cabriolet de collection" class="gallery-img">
+          <div class="gallery-label">INTERVENTION NOCTURNE VÉHICULE COLLECTION</div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/img5.jpeg" alt="Pick-up 4x4 lourd chargé sur plateau RC Carservice" class="gallery-img">
+          <div class="gallery-label">TRANSPORT PICK-UP & CHÂSSIS LOURD</div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/img4.jpeg" alt="Dépanneuse plateau Mercedes en intervention diurne" class="gallery-img">
+          <div class="gallery-label">DÉPANNEUSE MERCEDES RC CARSERVICE</div>
+        </div>
+
+        <div class="gallery-item span-2">
+          <img src="img/img9.jpeg" alt="Camionnette de dépannage RC Carservice avec voiture Touran" class="gallery-img">
+          <div class="gallery-label">LIVRAISON À L'ATELIER DE JUMET (RUE LOUIS BIERNEAUX 72)</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION EXPRÈS D'APPEL À L'ACTION (URGENCE IMMEDIATE)
+       ======================================================================== -->
+  <section class="urgent-cta-banner" aria-label="Appel d'urgence rapide">
+    <div class="container urgent-cta-inner">
+      
+      <div class="urgent-cta-text">
+        <span class="badge-mono badge-amber">PRIORITÉ ABSOLUE SUR LA ROUTE</span>
+        <h2 class="urgent-cta-title">
+          Vous êtes actuellement immobilisé sur l'autoroute ou en ville ?
+        </h2>
+        <p class="urgent-cta-desc">
+          Mettez vos passagers en sécurité derrière la barrière de protection. Cliquez ci-dessous pour déclencher l'envoi immédiat de la dépanneuse la plus proche de votre position.
+        </p>
+      </div>
+
+      <div class="urgent-cta-actions">
+        <a href="tel:+32472066236" class="urgent-phone-card" title="Appel direct immédiat">
+          <span class="urgent-phone-label">LIGNE D'URGENCE DIRECTE 24/7</span>
+          <span class="urgent-phone-num">0472 06 62 36</span>
+          <span style="font-size: 0.72rem; letter-spacing: 0.04em;">DÉCROCHAGE IMMÉDIAT EN MOINS DE 3 SONNERIES</span>
+        </a>
+        <a href="#formulaire" class="btn btn-secondary" style="width: 100%;">
+          OU REMPLIR LE FORMULAIRE EXPRESS
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FORMULAIRE DE DEMANDE D'INTERVENTION & DEVIS EXPRESS
+       ======================================================================== -->
+  <section class="form-section" id="formulaire">
+    <div class="container">
+      
+      <div class="section-head centered">
+        <span class="badge-mono">DEMANDE EN LIGNE SANS ENGAGEMENT</span>
+        <h2 class="section-head-title">Demander une intervention ou un devis express</h2>
+        <p class="section-head-desc">
+          Remplissez les informations ci-dessous. Pour une urgence absolue sur la voie publique, nous vous recommandons de composer directement le 0472 06 62 36.
+        </p>
+      </div>
+
+      <div class="form-layout-wrapper">
+        
+        <!-- Formulaire Interactif -->
+        <div class="form-card">
+          
+          <div class="form-tabs" role="tablist">
+            <button type="button" class="form-tab-btn active" data-type="urgent">
+              01. DÉPANNAGE ROUTE
+            </button>
+            <button type="button" class="form-tab-btn" data-type="rapatriement">
+              02. RAPATRIEMENT EUROPE
+            </button>
+            <button type="button" class="form-tab-btn" data-type="atelier">
+              03. ATELIER JUMET
+            </button>
+            <button type="button" class="form-tab-btn" data-type="epave">
+              04. ÉPAVE / MITRAILLE
+            </button>
+          </div>
+
+          <form id="interventionForm">
+            <input type="hidden" id="interventionTypeInput" name="interventionType" value="urgent">
+
+            <!-- Ligne 1 : Type de véhicule & Nature de la panne -->
+            <div class="form-group-row">
+              <div class="form-field">
+                <label for="vehiculeType" class="form-label">
+                  Type de véhicule <span class="required">*</span>
+                </label>
+                <select id="vehiculeType" class="form-select" required>
+                  <option value="tourisme">Voiture de tourisme / Berline</option>
+                  <option value="suv">SUV / 4x4 / Monospace</option>
+                  <option value="utilitaire">Utilitaire / Camionnette / Fourgon</option>
+                  <option value="collection">Véhicule de collection / Prestige</option>
+                  <option value="moto">Moto / Deux-roues</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="panneNature" class="form-label">
+                  Nature de la panne ou demande <span class="required">*</span>
+                </label>
+                <select id="panneNature" class="form-select" required>
+                  <option value="panne_moteur">Panne moteur / Véhicule immobilisé</option>
+                  <option value="boite_bloquee">Boîte automatique bloquée (P)</option>
+                  <option value="cles_perdues">Clés perdues ou enfermées</option>
+                  <option value="batterie">Batterie à plat / Besoin booster</option>
+                  <option value="erreur_carburant">Erreur de carburant (vidange)</option>
+                  <option value="crevaison">Crevaison / Problème pneumatique</option>
+                  <option value="meca_atelier">Réparation mécanique dans votre atelier</option>
+                  <option value="mecatronique">Problème mécatronique / DSG</option>
+                  <option value="mitraille">Enlèvement pour mitraille / ferraille</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Ligne 2 : Marque / Modèle & Immatriculation -->
+            <div class="form-group-row">
+              <div class="form-field">
+                <label for="carModel" class="form-label">
+                  Marque et Modèle du véhicule <span class="required">*</span>
+                </label>
+                <input type="text" id="carModel" class="form-input" placeholder="Ex: Peugeot 2008, VW Golf 7, BMW Série 3..." required>
+              </div>
+
+              <div class="form-field">
+                <label for="carPlate" class="form-label">
+                  Plaque d'immatriculation (Optionnel)
+                </label>
+                <input type="text" id="carPlate" class="form-input" placeholder="Ex: 1-ABC-123">
+              </div>
+            </div>
+
+            <!-- Ligne 3 : Lieux de départ et destination -->
+            <div class="form-group-row">
+              <div class="form-field">
+                <label for="departureCity" class="form-label">
+                  Lieu actuel du véhicule (Ville, Rue ou Autoroute) <span class="required">*</span>
+                </label>
+                <input type="text" id="departureCity" class="form-input" placeholder="Ex: Charleroi, E42 borne 45, Bruxelles, Allemagne..." required>
+              </div>
+
+              <div class="form-field">
+                <label for="destinationCity" class="form-label">
+                  Destination souhaitée pour le véhicule <span class="required">*</span>
+                </label>
+                <input type="text" id="destinationCity" class="form-input" placeholder="Ex: Atelier Jumet (Louis Bierneaux 72), Domicile..." value="Atelier Jumet" required>
+              </div>
+            </div>
+
+            <!-- Ligne 4 : Coordonnées contact -->
+            <div class="form-group-row">
+              <div class="form-field">
+                <label for="clientName" class="form-label">
+                  Votre nom complet <span class="required">*</span>
+                </label>
+                <input type="text" id="clientName" class="form-input" placeholder="Votre nom et prénom" required>
+              </div>
+
+              <div class="form-field">
+                <label for="clientPhone" class="form-label">
+                  Numéro de téléphone joignable immédiatement <span class="required">*</span>
+                </label>
+                <input type="tel" id="clientPhone" class="form-input" placeholder="Ex: 0472 00 00 00" required>
+              </div>
+            </div>
+
+            <!-- Message / Précisions -->
+            <div class="form-group-row single">
+              <div class="form-field">
+                <label for="clientNotes" class="form-label">
+                  Précisions utiles pour le dépanneur (accès sous-sol, roues bloquées, état du véhicule...)
+                </label>
+                <textarea id="clientNotes" class="form-textarea" placeholder="Indiquez ici tout détail facilitant l'accès du plateau..."></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1rem; padding: 18px;">
+              TRANSMETTRE LA DEMANDE D'INTERVENTION
+            </button>
+
+            <!-- Message de confirmation -->
+            <div class="form-status-alert success" id="formSuccessAlert">
+              DEMANDE REÇUE : Nos équipes ont bien réceptionné votre demande. Le dépanneur d'astreinte vous contacte immédiatement par téléphone au numéro indiqué. En cas d'urgence absolue, composez le 0472 06 62 36.
+            </div>
+
+          </form>
+
+        </div>
+
+        <!-- Sidebar Récapitulative Instantanée -->
+        <div class="form-summary-sidebar">
+          
+          <div class="summary-card">
+            <div class="summary-card-title">RÉSUMÉ DE LA DEMANDE</div>
+            
+            <ul class="summary-details-list">
+              <li class="summary-detail-row">
+                <span class="summary-detail-key">Type d'intervention</span>
+                <span class="summary-detail-val" id="summaryServiceVal">DÉPANNAGE ROUTE</span>
+              </li>
+              <li class="summary-detail-row">
+                <span class="summary-detail-key">Catégorie véhicule</span>
+                <span class="summary-detail-val" id="summaryVehiculeVal">Voiture de tourisme</span>
+              </li>
+              <li class="summary-detail-row">
+                <span class="summary-detail-key">Prise en charge</span>
+                <span class="summary-detail-val" id="summaryDepartVal">Non spécifié</span>
+              </li>
+              <li class="summary-detail-row">
+                <span class="summary-detail-key">Destination</span>
+                <span class="summary-detail-val" id="summaryDestVal">Atelier Jumet</span>
+              </li>
+              <li class="summary-detail-row">
+                <span class="summary-detail-key">Délai estimé</span>
+                <span class="summary-detail-val" id="summaryDelaiVal" style="color: var(--color-blue-cyan);">30 à 45 minutes</span>
+              </li>
+              <li class="summary-detail-row">
+                <span class="summary-detail-key">Équipement mobilisé</span>
+                <span class="summary-detail-val">Plateau basculant treuil</span>
+              </li>
+            </ul>
+
+            <div style="background: rgba(6, 11, 23, 0.6); padding: 14px; border-radius: var(--radius-xs); border: 1px solid rgba(255, 255, 255, 0.05); font-size: 0.76rem; color: #94a3b8; line-height: 1.5;">
+              NOTRE ENGAGEMENT QUALITÉ : Aucun frais caché. Facturation transparente déclarée sous le numéro BE 0534.982.714 valable pour le remboursement par vos assurances d'assistance.
+            </div>
+
+            <a href="tel:+32472066236" class="btn btn-emergency" style="width: 100%;">
+              APPEL DIRECT 0472 06 62 36
+            </a>
+          </div>
+
+          <div class="summary-card" style="padding: 24px;">
+            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-amber-accent); letter-spacing: 0.08em; text-transform: uppercase;">
+              ASSISTANCE ADMINISTRATIVE
+            </div>
+            <div style="font-size: 0.96rem; font-weight: 700; color: #ffffff; margin-top: 4px;">
+              Prise en charge par votre assurance
+            </div>
+            <p style="font-size: 0.82rem; color: #94a3b8; line-height: 1.5; margin-top: 6px;">
+              Selon votre contrat d'assistance (Touring, Ethias, DKV, AXA, AG, etc.), le remorquage peut être remboursé à 100%. Nous vous délivrons une facture conforme immédiatement.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       ZONES D'INTERVENTION & AXES ROUTIERS
+       ======================================================================== -->
+  <section class="section section-dark" id="zones">
+    <div class="container">
+      
+      <div class="section-head centered">
+        <span class="badge-mono">COUVERTURE GÉOGRAPHIQUE</span>
+        <h2 class="section-head-title">Intervention partout en Belgique et au-delà</h2>
+        <p class="section-head-desc">
+          Idéalement basés à Jumet au cœur du nœud autoroutier carolo, nous couvrons l'ensemble des provinces belges et assurons les liaisons internationales.
+        </p>
+      </div>
+
+      <div class="zone-grid">
+        
+        <!-- Zone 1 : Hainaut & Charleroi -->
+        <div class="zone-card">
+          <h3 class="zone-card-title">Hainaut & Charleroi Métropole</h3>
+          <p style="font-size: 0.85rem; color: #94a3b8;">Rayon d'action ultra-rapide sous 25 à 35 minutes depuis notre base de Jumet.</p>
+          <div class="zone-city-tags">
+            <span class="zone-tag">Jumet</span>
+            <span class="zone-tag">Gosselies</span>
+            <span class="zone-tag">Charleroi Centre</span>
+            <span class="zone-tag">Châtelet</span>
+            <span class="zone-tag">Courcelles</span>
+            <span class="zone-tag">Fleurus</span>
+            <span class="zone-tag">Mons</span>
+            <span class="zone-tag">La Louvière</span>
+            <span class="zone-tag">Binche</span>
+            <span class="zone-tag">Thuin</span>
+          </div>
+        </div>
+
+        <!-- Zone 2 : Bruxelles & Brabant -->
+        <div class="zone-card">
+          <h3 class="zone-card-title">Bruxelles & Brabant Wallon</h3>
+          <p style="font-size: 0.85rem; color: #94a3b8;">Accès rapide via l'A54, le Ring R0 et l'E19 pour dépannages urgents.</p>
+          <div class="zone-city-tags">
+            <span class="zone-tag">Bruxelles 19 Communes</span>
+            <span class="zone-tag">Ring R0</span>
+            <span class="zone-tag">Nivelles</span>
+            <span class="zone-tag">Braine-l'Alleud</span>
+            <span class="zone-tag">Waterloo</span>
+            <span class="zone-tag">Wavre</span>
+            <span class="zone-tag">Tubize</span>
+            <span class="zone-tag">Genappe</span>
+          </div>
+        </div>
+
+        <!-- Zone 3 : Namur, Liège & Flandre -->
+        <div class="zone-card">
+          <h3 class="zone-card-title">Namur, Liège & Axe Flandre</h3>
+          <p style="font-size: 0.85rem; color: #94a3b8;">Interventions d'urgence le long des dorsales autoroutières belges.</p>
+          <div class="zone-city-tags">
+            <span class="zone-tag">Namur</span>
+            <span class="zone-tag">Sambreville</span>
+            <span class="zone-tag">Gembloux</span>
+            <span class="zone-tag">Liège</span>
+            <span class="zone-tag">Huy</span>
+            <span class="zone-tag">Autoroute E42</span>
+            <span class="zone-tag">Autoroute E411</span>
+            <span class="zone-tag">Hal (Halle)</span>
+            <span class="zone-tag">Gand</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bandeau Autoroutes & Europe -->
+      <div style="background: var(--color-navy-base); border: 1px solid var(--color-navy-border); border-radius: var(--radius-sm); padding: 24px; margin-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-blue-cyan); letter-spacing: 0.08em; text-transform: uppercase;">
+            AXES AUTOROUTIERS & LIAISONS EUROPÉENNES
+          </div>
+          <div style="font-size: 0.94rem; color: #ffffff; font-weight: 700; margin-top: 4px;">
+            Couverture prioritaire des autoroutes E42, E19, E411, A54 et rapatriements Allemagne / France / Pays-Bas.
+          </div>
+        </div>
+        <a href="tel:+32472066236" class="btn btn-primary">SIGNALER UNE PANNE SUR AUTOROUTE</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION FAQ COMPLÈTE & PERTINENTE (ACCORDÉON PUR SANS AUCUNE ICONE)
+       ======================================================================== -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      
+      <div class="section-head centered">
+        <span class="badge-mono">TRANSPARENCE & PROCÉDURES</span>
+        <h2 class="section-head-title">Questions fréquentes sur nos services</h2>
+        <p class="section-head-desc">
+          Toutes les réponses claires sur nos délais, nos méthodes d'intervention et nos engagements légaux.
+        </p>
+      </div>
+
+      <div class="faq-list">
+
+        <!-- Question 1 -->
+        <div class="faq-item active">
+          <button type="button" class="faq-question-btn">
+            <span>Combien de temps faut-il pour que la dépanneuse arrive sur place ?</span>
+            <span class="faq-toggle-indicator" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <div class="faq-answer-text">
+              Dans la grande région de Charleroi, du Hainaut et du Brabant Wallon, notre délai d'arrivée moyen est compris entre 30 et 45 minutes selon l'état du trafic. Sur Bruxelles ou lors d'interventions sur autoroute, notre chauffeur vous donne un temps d'approche exact dès votre appel au 0472 06 62 36.
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn">
+            <span>Comment se passe la prise en charge financière par mon assurance ?</span>
+            <span class="faq-toggle-indicator" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <div class="faq-answer-text">
+              Notre entreprise est immatriculée sous le numéro d'entreprise officiel BE 0534.982.714. Nous vous établissons immédiatement une facture détaillée conforme comprenant le lieu d'enlèvement, le kilométrage et la nature du dépannage. Cette facture est acceptée par l'ensemble des compagnies d'assurance et assistances en Belgique pour votre remboursement intégral.
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn">
+            <span>Que faire si le levier de ma boîte automatique est bloqué sur P ?</span>
+            <span class="faq-toggle-indicator" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <div class="faq-answer-text">
+              Ne tentez jamais de forcer le levier ou de remorquer un véhicule automatique avec les roues motrices en prise au sol sous peine de détruire irrémédiablement les disques et pignons de transmission. Nos dépanneurs maîtrisent les points de déverrouillage manuel d'urgence propres à chaque constructeur (DSG, ZF, Mercedes, BMW, etc.) et disposent de chariots de ripage si le déblocage électronique s'avère impossible.
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn">
+            <span>Pouvez-vous ouvrir ma voiture sans rayer ni casser de vitre si j'ai perdu mes clés ?</span>
+            <span class="faq-toggle-indicator" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <div class="faq-answer-text">
+              Absolument. Nous utilisons des outillages professionnels d'ouverture fine qui s'insèrent délicatement par le joint ou la serrure sans rayer la carrosserie ni endommager les serrures électriques. De plus, selon le modèle de votre véhicule, nous disposons du matériel pour reprogrammer et vous refaire une nouvelle clé fonctionnelle en approximativement 1 heure.
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn">
+            <span>Comment organisez-vous un rapatriement depuis l'étranger (Allemagne, France...) ?</span>
+            <span class="faq-toggle-indicator" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <div class="faq-answer-text">
+              Comme nous nous déplaçons régulièrement en Allemagne et dans les pays limitrophes pour des missions de rapatriement, il vous suffit de nous communiquer la position exacte de votre véhicule. Nous convenons d'un créneau et mobilisons un plateau adapté longue distance pour récupérer votre voiture et la rapatrier directement à votre domicile ou à notre garage à Jumet.
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn">
+            <span>Quelles sont les pannes prises en charge directement sur place sans remorquage ?</span>
+            <span class="faq-toggle-indicator" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <div class="faq-answer-text">
+              Nous résolvons sur place les batteries à plat (avec nos boosters professionnels 12V et 24V), les erreurs de carburant (aspiration du mauvais carburant et purge du filtre), les remplacements de roues crevées ou mèches rapides, et l'ouverture des portières verrouillées. Si la panne est mécanique plus lourde, nous treuillons le véhicule sur notre plateau.
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn">
+            <span>Quels types de réparations assurez-vous dans votre garage à Jumet ?</span>
+            <span class="faq-toggle-indicator" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <div class="faq-answer-text">
+              Notre atelier mécanique situé Rue Louis Bierneaux 72 à Jumet est équipé pour tous les travaux : diagnostic électronique multimarque par valise, réfection de modules mécatroniques de boîtes automatiques, freins, amortisseurs, embrayages, distribution, alternateurs et démarreurs.
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn">
+            <span>Comment fonctionne le débarras de véhicule pour la ferraille / mitraille ?</span>
+            <span class="faq-toggle-indicator" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <div class="faq-answer-text">
+              Si votre voiture est accidentée, économiquement irréparable ou trop ancienne, nous pouvons intervenir avec notre plateau pour vous en débarrasser et l'acheminer vers les filières de recyclage de ferraille. Selon le type de véhicule, un rachat ou une reprise financière immédiate peut vous être proposé.
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn">
+            <span>Quels modes de règlement acceptez-vous lors de l'intervention ?</span>
+            <span class="faq-toggle-indicator" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <div class="faq-answer-text">
+              Nous acceptons les paiements par virement bancaire instantané, application bancaire / QR code Payconiq, espèces et cartes bancaires. Une facture officielle avec numéro de TVA vous est remise immédiatement pour votre comptabilité ou votre dossier de sinistre assurance.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FOOTER IRRÉPROCHABLE (TOUTES LES INFORMATIONS FORMELLES INSCRITES)
+       ======================================================================== -->
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      
+      <div class="footer-top-grid">
+        
+        <!-- Colonne 1 : Société & Description -->
+        <div class="footer-col">
+          <a href="#hero">
+            <img src="img/logo.jpeg" alt="RC Carservice Dépannage" class="footer-brand-logo">
+          </a>
+          <p class="footer-desc">
+            Entreprise professionnelle d'assistance routière, de dépannage sur plateau et de réparations mécaniques. Interventions 24 heures sur 24 et 7 jours sur 7 dans toute la Belgique et liaisons de rapatriement dans toute l'Europe.
+          </p>
+          <div style="font-family: var(--font-mono); font-size: 0.76rem; color: #cbd5e1;">
+            TVA : <span style="color: var(--color-blue-cyan); font-weight: 700;">BE 0534.982.714</span>
+          </div>
+        </div>
+
+        <!-- Colonne 2 : Prestations Dépanneur -->
+        <div class="footer-col">
+          <span class="footer-col-title">PRESTATIONS</span>
+          <ul class="footer-nav-list">
+            <li><a href="#services" class="footer-nav-link">Remorquage plateau 24/7</a></li>
+            <li><a href="#services" class="footer-nav-link">Déblocage boîte automatique</a></li>
+            <li><a href="#services" class="footer-nav-link">Réparation mécatronique & DSG</a></li>
+            <li><a href="#services" class="footer-nav-link">Clés perdues & ouverture</a></li>
+            <li><a href="#services" class="footer-nav-link">Booster & changement batterie</a></li>
+            <li><a href="#services" class="footer-nav-link">Vidange erreur carburant</a></li>
+            <li><a href="#services" class="footer-nav-link">Dépannage crevaison pneus</a></li>
+            <li><a href="#services" class="footer-nav-link">Enlèvement épave pour mitraille</a></li>
+          </ul>
+        </div>
+
+        <!-- Colonne 3 : Navigation Rapide -->
+        <div class="footer-col">
+          <span class="footer-col-title">ACCÈS DIRECT</span>
+          <ul class="footer-nav-list">
+            <li><a href="#hero" class="footer-nav-link">Accueil du service</a></li>
+            <li><a href="#rapatriement" class="footer-nav-link">Rapatriement Europe (Allemagne, France)</a></li>
+            <li><a href="#atelier" class="footer-nav-link">Atelier mécanique à Jumet</a></li>
+            <li><a href="#galerie" class="footer-nav-link">Flotte de camions plateaux</a></li>
+            <li><a href="#formulaire" class="footer-nav-link">Demande de devis en ligne</a></li>
+            <li><a href="#zones" class="footer-nav-link">Villes et autoroutes couvertes</a></li>
+            <li><a href="#faq" class="footer-nav-link">Foire aux questions (FAQ)</a></li>
+          </ul>
+        </div>
+
+        <!-- Colonne 4 : Coordonnées Officielles -->
+        <div class="footer-col">
+          <span class="footer-col-title">CONTACT & ATELIER</span>
+          
+          <div class="footer-contact-card">
+            
+            <div class="footer-contact-item">
+              <span class="footer-contact-label">LIGNE D'URGENCE DIRECTE (24H/24)</span>
+              <a href="tel:+32472066236" class="footer-contact-val highlight">
+                0472 06 62 36
+              </a>
+            </div>
+
+            <div class="footer-contact-item">
+              <span class="footer-contact-label">ADRESSE DU GARAGE & ATELIER</span>
+              <span class="footer-contact-val">
+                Rue Louis Bierneaux 72<br>
+                6040 Jumet (Belgique)
+              </span>
+            </div>
+
+            <div class="footer-contact-item">
+              <span class="footer-contact-label">DISPONIBILITÉ ASSISTANCE</span>
+              <span class="footer-contact-val">
+                24H / 24 • 7J / 7 • 365 Jours par an
+              </span>
+            </div>
+
+            <div class="footer-contact-item">
+              <span class="footer-contact-label">ENREGISTREMENT LÉGAL</span>
+              <span class="footer-contact-val" style="font-family: var(--font-mono); font-size: 0.8rem;">
+                Numéro d'entreprise : BE 0534.982.714
+              </span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bas du footer -->
+      <div class="footer-bottom-bar">
+        <div>
+          © 2026 RC CARSERVICE / RC DÉPANNAGE. Tous droits réservés. Entreprise enregistrée sous le numéro BE 0534.982.714.
+        </div>
+        <ul class="footer-legal-links">
+          <li><span>Agréé Assurances</span></li>
+          <li><span>Facture Officielle Conforme</span></li>
+          <li><span>Interventions Belgique & Europe</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       BARRE FLOTTANTE MOBILE D'URGENCE (POUR SMARTPHONE)
+       ======================================================================== -->
+  <div class="mobile-floating-bar" aria-label="Action rapide mobile">
+    <div class="mobile-floating-inner">
+      <a href="tel:+32472066236" class="btn btn-emergency" style="font-size: 0.82rem; padding: 12px 10px;">
+        APPEL DIRECT 24/7
+      </a>
+      <a href="#formulaire" class="btn btn-primary" style="font-size: 0.82rem; padding: 12px 10px;">
+        DEMANDE DE DEVIS
+      </a>
+    </div>
+  </div>
+
+  <!-- Script Logic -->
+  <script src="script.js"></script>
+</body>
+</html>
