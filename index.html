@@ -707,8 +707,11 @@
             </button>
           </div>
 
-          <form id="interventionForm">
-            <input type="hidden" id="interventionTypeInput" name="interventionType" value="urgent">
+          <form id="interventionForm" action="https://formspree.io/f/mvkkalor" method="POST">
+            <!-- Formspree Config & Honeypot -->
+            <input type="hidden" id="interventionTypeInput" name="type_intervention" value="01. DÉPANNAGE ROUTE">
+            <input type="hidden" id="emailSubject" name="_subject" value="[RC DÉPANNAGE] Nouvelle demande d'intervention">
+            <input type="text" name="_gotcha" style="display:none !important;" tabindex="-1" autocomplete="off" aria-hidden="true">
 
             <!-- Ligne 1 : Type de véhicule & Nature de la panne -->
             <div class="form-group-row">
@@ -716,30 +719,32 @@
                 <label for="vehiculeType" class="form-label">
                   Type de véhicule <span class="required">*</span>
                 </label>
-                <select id="vehiculeType" class="form-select" required>
-                  <option value="tourisme">Voiture de tourisme / Berline</option>
-                  <option value="suv">SUV / 4x4 / Monospace</option>
-                  <option value="utilitaire">Utilitaire / Camionnette / Fourgon</option>
-                  <option value="collection">Véhicule de collection / Prestige</option>
-                  <option value="moto">Moto / Deux-roues</option>
+                <select id="vehiculeType" name="type_vehicule" class="form-select" data-fs-field required>
+                  <option value="Voiture de tourisme / Berline">Voiture de tourisme / Berline</option>
+                  <option value="SUV / 4x4 / Monospace">SUV / 4x4 / Monospace</option>
+                  <option value="Utilitaire / Camionnette / Fourgon">Utilitaire / Camionnette / Fourgon</option>
+                  <option value="Véhicule de collection / Prestige">Véhicule de collection / Prestige</option>
+                  <option value="Moto / Deux-roues">Moto / Deux-roues</option>
                 </select>
+                <span data-fs-error="type_vehicule" class="form-field-error"></span>
               </div>
 
               <div class="form-field">
                 <label for="panneNature" class="form-label">
                   Nature de la panne ou demande <span class="required">*</span>
                 </label>
-                <select id="panneNature" class="form-select" required>
-                  <option value="panne_moteur">Panne moteur / Véhicule immobilisé</option>
-                  <option value="boite_bloquee">Boîte automatique bloquée (P)</option>
-                  <option value="cles_perdues">Clés perdues ou enfermées</option>
-                  <option value="batterie">Batterie à plat / Besoin booster</option>
-                  <option value="erreur_carburant">Erreur de carburant (vidange)</option>
-                  <option value="crevaison">Crevaison / Problème pneumatique</option>
-                  <option value="meca_atelier">Réparation mécanique dans votre atelier</option>
-                  <option value="mecatronique">Problème mécatronique / DSG</option>
-                  <option value="mitraille">Enlèvement pour mitraille / ferraille</option>
+                <select id="panneNature" name="nature_panne" class="form-select" data-fs-field required>
+                  <option value="Panne moteur / Véhicule immobilisé">Panne moteur / Véhicule immobilisé</option>
+                  <option value="Boîte automatique bloquée (P)">Boîte automatique bloquée (P)</option>
+                  <option value="Clés perdues ou enfermées">Clés perdues ou enfermées</option>
+                  <option value="Batterie à plat / Besoin booster">Batterie à plat / Besoin booster</option>
+                  <option value="Erreur de carburant (vidange)">Erreur de carburant (vidange)</option>
+                  <option value="Crevaison / Problème pneumatique">Crevaison / Problème pneumatique</option>
+                  <option value="Réparation mécanique atelier Jumet">Réparation mécanique dans votre atelier</option>
+                  <option value="Problème mécatronique / DSG">Problème mécatronique / DSG</option>
+                  <option value="Enlèvement épave / ferraille">Enlèvement pour mitraille / ferraille</option>
                 </select>
+                <span data-fs-error="nature_panne" class="form-field-error"></span>
               </div>
             </div>
 
@@ -749,14 +754,16 @@
                 <label for="carModel" class="form-label">
                   Marque et Modèle du véhicule <span class="required">*</span>
                 </label>
-                <input type="text" id="carModel" class="form-input" placeholder="Ex: Peugeot 2008, VW Golf 7, BMW Série 3..." required>
+                <input type="text" id="carModel" name="modele_vehicule" class="form-input" data-fs-field placeholder="Ex: Peugeot 2008, VW Golf 7, BMW Série 3..." required>
+                <span data-fs-error="modele_vehicule" class="form-field-error"></span>
               </div>
 
               <div class="form-field">
                 <label for="carPlate" class="form-label">
                   Plaque d'immatriculation (Optionnel)
                 </label>
-                <input type="text" id="carPlate" class="form-input" placeholder="Ex: 1-ABC-123">
+                <input type="text" id="carPlate" name="immatriculation" class="form-input" data-fs-field placeholder="Ex: 1-ABC-123">
+                <span data-fs-error="immatriculation" class="form-field-error"></span>
               </div>
             </div>
 
@@ -766,51 +773,83 @@
                 <label for="departureCity" class="form-label">
                   Lieu actuel du véhicule (Ville, Rue ou Autoroute) <span class="required">*</span>
                 </label>
-                <input type="text" id="departureCity" class="form-input" placeholder="Ex: Charleroi, E42 borne 45, Bruxelles, Allemagne..." required>
+                <input type="text" id="departureCity" name="lieu_depart" class="form-input" data-fs-field placeholder="Ex: Charleroi, E42 borne 45, Bruxelles, Allemagne..." required>
+                <span data-fs-error="lieu_depart" class="form-field-error"></span>
               </div>
 
               <div class="form-field">
                 <label for="destinationCity" class="form-label">
                   Destination souhaitée pour le véhicule <span class="required">*</span>
                 </label>
-                <input type="text" id="destinationCity" class="form-input" placeholder="Ex: Atelier Jumet (Louis Bierneaux 72), Domicile..." value="Atelier Jumet" required>
+                <input type="text" id="destinationCity" name="lieu_destination" class="form-input" data-fs-field placeholder="Ex: Atelier Jumet (Louis Bierneaux 72), Domicile..." value="Atelier Jumet" required>
+                <span data-fs-error="lieu_destination" class="form-field-error"></span>
               </div>
             </div>
 
-            <!-- Ligne 4 : Coordonnées contact -->
+            <!-- Ligne 4 : Coordonnées de contact direct -->
             <div class="form-group-row">
               <div class="form-field">
                 <label for="clientName" class="form-label">
                   Votre nom complet <span class="required">*</span>
                 </label>
-                <input type="text" id="clientName" class="form-input" placeholder="Votre nom et prénom" required>
+                <input type="text" id="clientName" name="nom_client" class="form-input" data-fs-field placeholder="Votre nom et prénom" required>
+                <span data-fs-error="nom_client" class="form-field-error"></span>
               </div>
 
               <div class="form-field">
                 <label for="clientPhone" class="form-label">
                   Numéro de téléphone joignable immédiatement <span class="required">*</span>
                 </label>
-                <input type="tel" id="clientPhone" class="form-input" placeholder="Ex: 0472 00 00 00" required>
+                <input type="tel" id="clientPhone" name="telephone" class="form-input" data-fs-field placeholder="Ex: 0472 00 00 00" required minlength="8">
+                <span data-fs-error="telephone" class="form-field-error"></span>
               </div>
             </div>
 
-            <!-- Message / Précisions -->
+            <!-- Ligne 5 : Email & Préférence de rappel -->
+            <div class="form-group-row">
+              <div class="form-field">
+                <label for="clientEmail" class="form-label">
+                  Adresse email (pour recevoir l'accusé de réception)
+                </label>
+                <input type="email" id="clientEmail" name="email" class="form-input" data-fs-field placeholder="Ex: votre.email@exemple.com">
+                <span data-fs-error="email" class="form-field-error"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="clientContactPref" class="form-label">
+                  Préférence de rappel
+                </label>
+                <select id="clientContactPref" name="preference_rappel" class="form-select" data-fs-field>
+                  <option value="Appel téléphonique direct">Appel téléphonique direct (Recommandé)</option>
+                  <option value="WhatsApp / SMS">WhatsApp / SMS</option>
+                  <option value="Email">Email</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Message / Précisions utiles -->
             <div class="form-group-row single">
               <div class="form-field">
                 <label for="clientNotes" class="form-label">
                   Précisions utiles pour le dépanneur (accès sous-sol, roues bloquées, état du véhicule...)
                 </label>
-                <textarea id="clientNotes" class="form-textarea" placeholder="Indiquez ici tout détail facilitant l'accès du plateau..."></textarea>
+                <textarea id="clientNotes" name="remarques_intervention" class="form-textarea" data-fs-field placeholder="Indiquez ici tout détail facilitant l'accès du plateau..."></textarea>
+                <span data-fs-error="remarques_intervention" class="form-field-error"></span>
               </div>
             </div>
 
-            <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1rem; padding: 18px;">
+            <button type="submit" class="btn btn-primary" data-fs-submit-btn style="width: 100%; font-size: 1rem; padding: 18px;">
               TRANSMETTRE LA DEMANDE D'INTERVENTION
             </button>
 
-            <!-- Message de confirmation -->
-            <div class="form-status-alert success" id="formSuccessAlert">
-              DEMANDE REÇUE : Nos équipes ont bien réceptionné votre demande. Le dépanneur d'astreinte vous contacte immédiatement par téléphone au numéro indiqué. En cas d'urgence absolue, composez le 0472 06 62 36.
+            <!-- Message de confirmation Formspree -->
+            <div class="form-status-alert success" id="formSuccessAlert" data-fs-success>
+              <strong>DEMANDE REÇUE :</strong> Nos équipes ont bien réceptionné votre demande. Le dépanneur d'astreinte vous contacte immédiatement par téléphone au numéro indiqué. En cas d'urgence absolue, composez directement le <strong>0472 06 62 36</strong>.
+            </div>
+
+            <!-- Message d'erreur Formspree -->
+            <div class="form-status-alert error" id="formErrorAlert" data-fs-error>
+              <strong>ATTENTION :</strong> Une erreur est survenue lors de l'envoi de votre demande. Veuillez vérifier vos informations ou contacter immédiatement notre permanence d'urgence au <strong>0472 06 62 36</strong>.
             </div>
 
           </form>
@@ -1220,7 +1259,55 @@
     </div>
   </div>
 
+  <!-- Formspree Vanilla JS (Ajax) Library -->
+  <script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', {
+      formElement: '#interventionForm',
+      formId: 'mvkkalor',
+      onSubmit: function (context) {
+        var submitBtn = context.form.querySelector('[data-fs-submit-btn]');
+        if (submitBtn) {
+          submitBtn.dataset.originalLabel = submitBtn.textContent;
+          submitBtn.textContent = 'TRANSMISSION EN COURS...';
+        }
+      },
+      onSuccess: function (context, result) {
+        var successAlert = document.getElementById('formSuccessAlert');
+        var errorAlert = document.getElementById('formErrorAlert');
+        if (errorAlert) {
+          errorAlert.style.display = 'none';
+          errorAlert.removeAttribute('data-fs-active');
+        }
+        if (successAlert) {
+          successAlert.style.display = 'block';
+          successAlert.setAttribute('data-fs-active', '');
+          successAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+        // Réinitialiser le récapitulatif
+        var summaryDepartVal = document.getElementById('summaryDepartVal');
+        var summaryDestVal = document.getElementById('summaryDestVal');
+        if (summaryDepartVal) summaryDepartVal.textContent = 'Non spécifié';
+        if (summaryDestVal) summaryDestVal.textContent = 'Atelier Jumet';
+      },
+      onError: function (context, error) {
+        var successAlert = document.getElementById('formSuccessAlert');
+        var errorAlert = document.getElementById('formErrorAlert');
+        if (successAlert) {
+          successAlert.style.display = 'none';
+          successAlert.removeAttribute('data-fs-active');
+        }
+        if (errorAlert) {
+          errorAlert.style.display = 'block';
+          errorAlert.setAttribute('data-fs-active', '');
+          errorAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      }
+    });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
   <!-- Script Logic -->
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

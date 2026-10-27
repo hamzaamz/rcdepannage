@@ -92,11 +92,17 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.classList.add('active');
 
       const selectedType = btn.getAttribute('data-type');
+      const labelText = btn.textContent.trim();
+
       if (interventionTypeInput) {
-        interventionTypeInput.value = selectedType;
+        interventionTypeInput.value = labelText;
+      }
+      const emailSubject = document.getElementById('emailSubject');
+      if (emailSubject) {
+        emailSubject.value = `[RC DÉPANNAGE] Demande d'intervention - ${labelText}`;
       }
       if (summaryServiceVal) {
-        summaryServiceVal.textContent = btn.textContent.trim();
+        summaryServiceVal.textContent = labelText;
       }
 
       // Update estimated dispatch
@@ -136,36 +142,89 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 5. Form Submission Simulation
+  // 5. Formspree Integration & Submission Handling
   const quoteForm = document.getElementById('interventionForm');
   const formSuccessAlert = document.getElementById('formSuccessAlert');
+  const formErrorAlert = document.getElementById('formErrorAlert');
 
-  if (quoteForm && formSuccessAlert) {
-    quoteForm.addEventListener('submit', (e) => {
-      e.preventDefault();
+  function resetFormSummary() {
+    if (summaryDepartVal) summaryDepartVal.textContent = 'Non spécifié';
+    if (summaryDestVal) summaryDestVal.textContent = 'Atelier Jumet';
+  }
 
-      const phoneVal = document.getElementById('clientPhone').value;
-      if (!phoneVal || phoneVal.length < 8) {
+  // Synchronize reset event with the interactive summary sidebar
+  if (quoteForm) {
+    quoteForm.addEventListener('reset', () => {
+      setTimeout(resetFormSummary, 50);
+    });
+  }
+
+  // Native fetch fallback if @formspree/ajax CDN is unreachable or blocked
+  if (quoteForm) {
+    quoteForm.addEventListener('submit', async (e) => {
+      // Basic phone length validation
+      const phoneInput = document.getElementById('clientPhone');
+      if (phoneInput && phoneInput.value.trim().length < 8) {
+        e.preventDefault();
         alert('Veuillez renseigner un numéro de téléphone valide afin que le dépanneur puisse vous contacter immédiatement.');
+        phoneInput.focus();
         return;
       }
 
-      const submitBtn = quoteForm.querySelector('button[type="submit"]');
-      const originalText = submitBtn.textContent;
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'TRANSMISSION EN COURS...';
+      // If the event was already intercepted by @formspree/ajax, don't execute fallback
+      if (e.defaultPrevented) return;
 
-      setTimeout(() => {
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalText;
-        formSuccessAlert.style.display = 'block';
-        formSuccessAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        
-        // Reset form inputs except type
-        quoteForm.reset();
-        if (summaryDepartVal) summaryDepartVal.textContent = 'Non spécifié';
-        if (summaryDestVal) summaryDestVal.textContent = 'Atelier Jumet';
-      }, 700);
+      // Fallback: Submit via Fetch API to Formspree endpoint
+      e.preventDefault();
+      const submitBtn = quoteForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn ? submitBtn.textContent : '';
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'TRANSMISSION EN COURS...';
+      }
+      if (formErrorAlert) {
+        formErrorAlert.style.display = 'none';
+        formErrorAlert.removeAttribute('data-fs-active');
+      }
+
+      try {
+        const formData = new FormData(quoteForm);
+        const response = await fetch('https://formspree.io/f/mvkkalor', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          quoteForm.reset();
+          resetFormSummary();
+          if (formSuccessAlert) {
+            formSuccessAlert.style.display = 'block';
+            formSuccessAlert.setAttribute('data-fs-active', '');
+            formSuccessAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+        } else {
+          const data = await response.json();
+          const errorMsg = data && data.errors && data.errors.length > 0
+            ? data.errors.map(err => err.message).join(', ')
+            : 'Erreur lors de la transmission.';
+          throw new Error(errorMsg);
+        }
+      } catch (err) {
+        if (formErrorAlert) {
+          formErrorAlert.style.display = 'block';
+          formErrorAlert.setAttribute('data-fs-active', '');
+          formErrorAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+        }
+      }
     });
   }
 
